@@ -12,9 +12,9 @@ main {
 }
 
 .card {
-background-color: #eee;
-padding: 1rem;
-box-shadow: 0 0 5px #333;
-border-radius: 5px;
-width: 200px;
+  background-color: #111111;
+  padding: 1rem;
+  box-shadow: 0 0 5px #333;
+  border-radius: 5px;
+  width: 200px;
 }

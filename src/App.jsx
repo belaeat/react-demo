@@ -1,16 +1,15 @@
 import "./App.css";
-import Card from './Card'
+import Card from "./Card";
 
 function App() {
   return (
     <div>
-      <header>LOGO</header>
       <main>
-        <Card firstName="Margit" title="CEO" age="29" />
-        <Card firstName="Karin" title="Designer" age="45" />
-        <Card firstName="Kati" title="Developer" age="25" />
-        <Card firstName="John" title="Developer" age="25" />
-        <Card firstName="Jane" title="Developer" age="25" />
+        <Card firstName="Belaeat" title="Developer" age="29" />
+        <Card firstName="Shawon" title="Bepshayi" age="45" />
+        <Card firstName="Andrei" title="Designer" age="25" />
+        <Card firstName="Nikita" title="Bepshayi" age="25" />
+        <Card firstName="Athina" title="Atel" age="25" />
       </main>
     </div>
   );
