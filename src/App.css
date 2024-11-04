@@ -5,10 +5,14 @@
   text-align: center;
 }
 
-main {
+.list {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.log-btn {
+  margin-bottom: 50px;
 }
 
 .card {

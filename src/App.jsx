@@ -1,30 +1,42 @@
+import { useState } from "react";
 import "./App.css";
 import Card from "./Card";
-import { useState } from "react";
+import { persons } from "./array";
 
-// using useState() hook
 function App() {
-  const [person, setPerson] = useState({
-    firstName: "Belaeat",
-    title: "Developer",
-    age: 45,
-  });
+  /* console.log(persons); */
+
+  const [isLoggedIn, setLoggedIn] = useState(false);
+
+  const clickHandler = () => {
+    setLoggedIn(!isLoggedIn);
+  };
 
   return (
-    <div>
-      <main>
-        <Card
-          firstName={person.firstName}
-          title={person.title}
-          age={person.age}
-        />
-        <Card firstName="Dummy" title="Developer" age="29" />
-        <Card firstName="Shawon" title="Bepshayi" age="45" />
-        <Card firstName="Andrei" title="Designer" age="25" />
-        <Card firstName="Nikita" title="Bepshayi" age="25" />
-        <Card firstName="Athina" title="Atel" age="25" />
-      </main>
-    </div>
+    <main>
+      {isLoggedIn ? (
+        <div>
+          <button className="log-btn" onClick={clickHandler}>
+            Logout
+          </button>
+          <div className="list">
+            {persons.map((person) => (
+              <Card
+                key={person.id}
+                firstName={person.firstName}
+                title={person.title}
+                age={person.age}
+                favAnimal={person.favAnimal}
+              />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div>
+          <button onClick={clickHandler}> Please login to see the list</button>
+        </div>
+      )}
+    </main>
   );
 }
 
