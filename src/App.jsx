@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./App.css";
-import Card from "./Card";
+import Card from "./components/Card/Card";
 import { persons } from "./array";
 
 function App() {
   /* console.log(persons); */
 
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(true);
 
   const clickHandler = () => {
     setLoggedIn(!isLoggedIn);
