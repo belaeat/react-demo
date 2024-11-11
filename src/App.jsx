@@ -8,15 +8,15 @@ function App() {
 
   const [isLoggedIn, setLoggedIn] = useState(true);
 
-  const clickHandler = () => {
-    setLoggedIn(!isLoggedIn);
+  const toggleLogin = () => {
+    setLoggedIn((prevState) => !prevState);
   };
 
   return (
     <main>
       {isLoggedIn ? (
         <div>
-          <button className="log-btn" onClick={clickHandler}>
+          <button className="log-btn" onClick={toggleLogin}>
             Logout
           </button>
           <div className="list">
@@ -33,7 +33,7 @@ function App() {
         </div>
       ) : (
         <div>
-          <button onClick={clickHandler}> Please login to see the list</button>
+          <button onClick={toggleLogin}> Please login to see the list</button>
         </div>
       )}
     </main>
